@@ -1,0 +1,151 @@
+.bgImageDesktop p {
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 0;
+}
+.bgImageDesktop {
+  /* position: relative; */
+  background-image: url(../images/bg-main-desktop.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 33%;
+  min-width: 250px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.cardBackContainer {
+  position: relative;
+  left: 40%;
+  width: 350px;
+  height: 200px;
+  background-image: url("../images/bg-card-back.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0.5rem;
+  padding: 0 3rem 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.frontCardNumberInput {
+  position: relative;
+  left: 25%;
+  width: 350px;
+  height: 200px;
+  background-image: url("../images/bg-card-front.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-radius: 0.5rem;
+  padding: 0 1.5rem;
+  /* align-items: flex-start; */
+}
+.frontCardNumber {
+  /* text-align: center; */
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 36px;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: 1.45px;
+}
+
+.cardInputName {
+  display: flex;
+  justify-content: space-between;
+  /* margin: 1rem 1.5rem; */
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.bigCircle {
+  /* position: absolute; */
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.smallCircle {
+  /* position: absolute; */
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+@media (max-width: 900px) {
+  .bgImageDesktop {
+    width: 100%;
+    height: 220px;
+    flex-direction: row;
+    /* align-items: center; */
+    justify-content: center;
+  }
+  .frontCardContainer {
+    position: relative;
+  }
+  .frontCardNumberInput {
+    position: absolute;
+    width: 280px;
+    height: 155px;
+    /* left: 2rem; */
+    z-index: 10;
+    top: 7rem;
+  }
+  .bgImageDesktop p {
+    font-family: "Space Grotesk";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 9px;
+    line-height: 11px;
+    letter-spacing: 1.28571px;
+    text-transform: uppercase;
+
+    /* White */
+
+    color: #ffffff;
+  }
+  .frontCardNumber {
+    font-family: "Space Grotesk";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    /* identical to box height */
+
+    letter-spacing: 2.2px;
+
+    /* White */
+
+    color: #ffffff;
+  }
+  .cardBackContainer {
+    left: 0;
+    margin-top: 1.5rem;
+    width: 280px;
+    height: 155px;
+    min-width: 280px;
+  }
+}

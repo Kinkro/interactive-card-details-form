@@ -1,23 +1,57 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useState, useRef } from "react";
+import Form from "./components/Form";
+import Cards from "./components/Cards";
+import ThankYou from "./components/ThankYou";
 
 function App() {
+  const [name, setName] = useState("");
+  const [cardNumber, setCardNumber] = useState("");
+
+  const [num, setNum] = useState("");
+  const [error, setError] = useState(false);
+  const [month, setMonth] = useState("");
+  const [year, setYear] = useState("");
+  const [cvc, setCvc] = useState("");
+  const [thankYou, setThankYou] = useState(true);
+
+  const yearRef = useRef(null);
+  const cvcRef = useRef(null);
+  // console.log(cvcRef.current.value);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Cards
+        cardNumber={cardNumber}
+        name={name}
+        month={month}
+        year={year}
+        cvc={cvc}
+      />
+
+      {thankYou ? (
+        <Form
+          name={name}
+          setName={setName}
+          cardNumber={cardNumber}
+          setCardNumber={setCardNumber}
+          num={num}
+          setNum={setNum}
+          error={error}
+          setError={setError}
+          month={month}
+          setMonth={setMonth}
+          year={year}
+          setYear={setYear}
+          cvc={cvc}
+          setCvc={setCvc}
+          // thankYou={thankYou}
+          setThankYou={setThankYou}
+          yearRef={yearRef}
+          cvcRef={cvcRef}
+        />
+      ) : (
+        <ThankYou />
+      )}
     </div>
   );
 }
