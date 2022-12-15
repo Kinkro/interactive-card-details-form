@@ -17,7 +17,6 @@ function App() {
 
   const yearRef = useRef(null);
   const cvcRef = useRef(null);
-  // console.log(cvcRef.current.value);
   return (
     <div className="App">
       <Cards

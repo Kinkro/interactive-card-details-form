@@ -28,9 +28,6 @@ function Form({
     cvc: false,
   });
 
-  console.log(name.length === 0);
-  console.log(blank);
-
   return (
     <form
       className={styles.allInputs}
